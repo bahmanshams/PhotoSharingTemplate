@@ -14,7 +14,11 @@ gulp.task('move-js', function() {
     .pipe(gulp.dest('src/js'))
     .pipe(browserSync.stream())
 });
-
+gulp.task('move-fonts', function() {
+    return gulp.src(['node_modules/font-awesome/fonts/*'])
+    .pipe(gulp.dest('src/font'))
+    .pipe(browserSync.stream())
+});
 //run sass when serve runs
 //run server
 //watch for any changes in src/scss folder and reload the browser
@@ -24,11 +28,11 @@ gulp.task('launch-server', ['compile-sass'], function() {
     browserSync.init({
         server: "./src"
     });
-    gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'],['compile-sass']);
+    gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss','node_modules/font-awesome/scss/font-awesome.scss', 'src/scss/*.scss'],['compile-sass']);
     gulp.watch("src/*.html").on('change', browserSync.reload)
 });
 
 //run gulp
 //launch server and browser
 //execute js task
-gulp.task('default', ['move-js', 'launch-server']);
+gulp.task('default', ['move-js','move-fonts', 'launch-server']);

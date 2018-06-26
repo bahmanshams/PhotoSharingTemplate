@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "font-awesome": "^4.7.0",
     "jQuery": "^1.7.4",
     "tether": "^1.4.4"
   },
