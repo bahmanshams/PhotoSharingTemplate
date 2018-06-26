@@ -16,7 +16,7 @@ gulp.task('move-js', function() {
 });
 gulp.task('move-fonts', function() {
     return gulp.src(['node_modules/font-awesome/fonts/*'])
-    .pipe(gulp.dest('src/font'))
+    .pipe(gulp.dest('src/fonts'))
     .pipe(browserSync.stream())
 });
 //run sass when serve runs
