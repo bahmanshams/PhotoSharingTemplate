@@ -1,0 +1,22 @@
+{
+  "name": "UIFramework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jQuery": "^1.7.4",
+    "tether": "^1.4.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-comments": "^1.3.0",
+    "gulp-sass": "^4.0.1"
+  }
+}
